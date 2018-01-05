@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prototype </title>
+</head>
+<body>
+	
+</body>
+<script>
+	var proto={
+		sentence:4,
+		probation:2
+	};
+	Prisoner=function(name,age){
+		this.name=name;
+		this.age=age;
+	}
+	Prisoner.prototype=proto;
+	var firstPrisoner=new Prisoner("Jack",49),
+	    sencondPrisoner=new Prisoner("Timi",100);
+	    console.log(firstPrisoner.sentence);
+	    //以下为第二种方法
+   var makePrisoner=function(name,age){
+   	var Perisoner=Object.create(proto);
+   	   Persisoner.name=name;
+   	   Perisoner.age=age;
+   	   return Persioner;
+   };
+
+   createObject=function(arg){
+   	if (!arg) {return {};};
+   	function obj(){};
+   	obj.prototype=arg;
+   	return new obj;
+   };//兼容函数。
+   Object.create=Object.create || createObject;
+
+</script>
+</html>
