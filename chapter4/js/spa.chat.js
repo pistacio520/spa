@@ -46,7 +46,7 @@
 				slider_close_time:250,
 				slider_opened_em:16,
 				slider_closed_em:2,
-				slider_open_title:'Click to close',
+				slider_opened_title:'Click to close',
 				slider_closed_title:'Click to open',
 
 				chat_model:null,
@@ -78,7 +78,7 @@
 			   	jqueryMap={
 			   		$slider : $slider,
 			   		$head   : $slider.find('.spa-chat-head'),
-			   		$toggle : $slider.find('.spa-chat-toggle'),
+			   		$toggle : $slider.find('.spa-chat-head-toggle'),
 			   		$title  : $slider.find('spa-chat-title'),
 			   		$sizer  : $slider.find('.spa-chat-sizer'),
 			   		$msgs   : $slider.find('.spa-chat-msgs'),
